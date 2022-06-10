@@ -60,6 +60,11 @@ const resErrorProd = (err, res) => {
 			status: 'error',
 			message: '(app)JSON 格式錯誤，請再次確認JSON Formate!'
 		})
+	} else if (err.code === 'LIMIT_FILE_SIZE'){ 
+		res.status(400).json({
+			status: 'error',
+			message: '檔案超過2MB，無法上傳 !'
+		})
 	} else {
 		// log 紀錄
 		console.error('出現重大錯誤', err);

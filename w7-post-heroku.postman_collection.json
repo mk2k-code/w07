@@ -1,0 +1,603 @@
+{
+	"info": {
+		"_postman_id": "610c37a7-6b72-405f-bfde-1a4618f73e2a",
+		"name": "w7:post-heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2640646"
+	},
+	"item": [
+		{
+			"name": "會員",
+			"item": [
+				{
+					"name": "查詢所有users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://vast-lake-28740.herokuapp.com/users/",
+							"protocol": "https",
+							"host": [
+								"vast-lake-28740",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "singUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jason L Lin\",\r\n    \"email\": \"jason.L.lin@gmail.com\",\r\n    \"password\": \"1q2w3e\",\r\n    \"confirmPassword\": \"1q2w3e\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://vast-lake-28740.herokuapp.com/users/sign_up",
+							"protocol": "https",
+							"host": [
+								"vast-lake-28740",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"sign_up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "singIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jason Lin\",\r\n    \"email\": \"jason.lin@gmail.com\",\r\n    \"password\": \"1q2w3e\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://vast-lake-28740.herokuapp.com/users/sign_in",
+							"protocol": "https",
+							"host": [
+								"vast-lake-28740",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"sign_in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTIxOTM2ZmM1ZjA2MmY4MTM4MjVhZiIsImlhdCI6MTY1NDgyMzM3OCwiZXhwIjoxNjU1Njg3Mzc4fQ.hj_93Md88oJtHZGRhmNmtcAGRh_Ub-yWPlJ3XiXsYmc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://vast-lake-28740.herokuapp.com/users/profile",
+							"protocol": "https",
+							"host": [
+								"vast-lake-28740",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProfile",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTIxOTM2ZmM1ZjA2MmY4MTM4MjVhZiIsImlhdCI6MTY1NDgyMzM3OCwiZXhwIjoxNjU1Njg3Mzc4fQ.hj_93Md88oJtHZGRhmNmtcAGRh_Ub-yWPlJ3XiXsYmc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Jason Lin\",\r\n    \"email\": \"jason.lin@gmail.com\",\r\n    \"photo\": \"https://thumb.fakeface.rest/thumb_male_10_8c02e4e9bdc0e103530691acfca605f18caf1766.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://vast-lake-28740.herokuapp.com/users/profile",
+							"protocol": "https",
+							"host": [
+								"vast-lake-28740",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTIxOTM2ZmM1ZjA2MmY4MTM4MjVhZiIsImlhdCI6MTY1NDgyMzM3OCwiZXhwIjoxNjU1Njg3Mzc4fQ.hj_93Md88oJtHZGRhmNmtcAGRh_Ub-yWPlJ3XiXsYmc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://vast-lake-28740.herokuapp.com/users/changePassword",
+							"protocol": "https",
+							"host": [
+								"vast-lake-28740",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"changePassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "貼文",
+			"item": [
+				{
+					"name": "查詢posts(param)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://vast-lake-28740.herokuapp.com/posts?timeSort=desc&q=1",
+							"protocol": "https",
+							"host": [
+								"vast-lake-28740",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"posts"
+							],
+							"query": [
+								{
+									"key": "timeSort",
+									"value": "desc"
+								},
+								{
+									"key": "q",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查詢posts(all)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://vast-lake-28740.herokuapp.com/posts",
+							"protocol": "https",
+							"host": [
+								"vast-lake-28740",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查詢postsByUser(signIn)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTIxOTM2ZmM1ZjA2MmY4MTM4MjVhZiIsImlhdCI6MTY1NDc5MDQ2OCwiZXhwIjoxNjU1Mzk1MjY4fQ.sOBPGtw3EmB4QYZOl_JYTDm78qSTTZ_K0egVacSG3Ac",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://vast-lake-28740.herokuapp.com/posts/get_posts_by_user",
+							"protocol": "https",
+							"host": [
+								"vast-lake-28740",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"posts",
+								"get_posts_by_user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查詢單筆post",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://vast-lake-28740.herokuapp.com/posts/getpost/62a21c39330ec8acefd17a03",
+							"protocol": "https",
+							"host": [
+								"vast-lake-28740",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"posts",
+								"getpost",
+								"62a21c39330ec8acefd17a03"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "新增單筆post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTIxOTM2ZmM1ZjA2MmY4MTM4MjVhZiIsImlhdCI6MTY1NDc5MDQ2OCwiZXhwIjoxNjU1Mzk1MjY4fQ.sOBPGtw3EmB4QYZOl_JYTDm78qSTTZ_K0egVacSG3Ac",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"0609 testing .....#6\"\r\n}\r\n   \r\n   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://vast-lake-28740.herokuapp.com/posts",
+							"protocol": "https",
+							"host": [
+								"vast-lake-28740",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "更新單筆post",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTIxOTM2ZmM1ZjA2MmY4MTM4MjVhZiIsImlhdCI6MTY1NDc5MDQ2OCwiZXhwIjoxNjU1Mzk1MjY4fQ.sOBPGtw3EmB4QYZOl_JYTDm78qSTTZ_K0egVacSG3Ac",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n\r\n        {\r\n            \"image\": \"http://dummyimage.com/197x100.png/dddddd/000000\",\r\n            \"content\": \"oxoxoxoxoxoxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"\r\n\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://vast-lake-28740.herokuapp.com/posts/62a21c39330ec8acefd17a03",
+							"protocol": "https",
+							"host": [
+								"vast-lake-28740",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"posts",
+								"62a21c39330ec8acefd17a03"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "刪除單筆post",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTIxOTM2ZmM1ZjA2MmY4MTM4MjVhZiIsImlhdCI6MTY1NDc5MDQ2OCwiZXhwIjoxNjU1Mzk1MjY4fQ.sOBPGtw3EmB4QYZOl_JYTDm78qSTTZ_K0egVacSG3Ac",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://vast-lake-28740.herokuapp.com/posts/62a21c39330ec8acefd17a03",
+							"protocol": "https",
+							"host": [
+								"vast-lake-28740",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"posts",
+								"62a21c39330ec8acefd17a03"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Upload Image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTIxOTM2ZmM1ZjA2MmY4MTM4MjVhZiIsImlhdCI6MTY1NDgyMzM3OCwiZXhwIjoxNjU1Njg3Mzc4fQ.hj_93Md88oJtHZGRhmNmtcAGRh_Ub-yWPlJ3XiXsYmc",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": "/U:/Node.js 直播班 - 2022 春季班/q3.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://vast-lake-28740.herokuapp.com/upload",
+					"protocol": "https",
+					"host": [
+						"vast-lake-28740",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "myIpaddress",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://vast-lake-28740.herokuapp.com/ip",
+					"protocol": "https",
+					"host": [
+						"vast-lake-28740",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"ip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "無此路由 #1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\":\"bbbbb\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://vast-lake-28740.herokuapp.com/todos",
+					"protocol": "https",
+					"host": [
+						"vast-lake-28740",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "無此路由 #2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titl\":\"bbbbb\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://vast-lake-28740.herokuapp.com/todos",
+					"protocol": "https",
+					"host": [
+						"vast-lake-28740",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

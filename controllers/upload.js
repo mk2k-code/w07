@@ -7,7 +7,7 @@ const upload = {
 		if (!req.files.length) {
 			return next(appError(400, "尚未上傳檔案", next));
 		}
-		const dimensions = sizeOf(req.files[0].buffer);
+		// const dimensions = sizeOf(req.files[0].buffer);
 		// if (dimensions.width !== dimensions.height) {
 		// 	return next(appError(400, "圖片長寬不符合 1:1 尺寸。", next));
 		// }
